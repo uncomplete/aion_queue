@@ -1,6 +1,4 @@
-package com.aion.error.queue;
-
-import com.aion.error.ErrorCode;
+package com.aion.aion.error;
 
 /**
  * Thrown by the timed overloads of {@code AionQueueReader.tick/tickTo/peekNextT} (and {@code
@@ -10,6 +8,6 @@ import com.aion.error.ErrorCode;
 public final class AionQueueReadException extends AionQueueException {
 
   public AionQueueReadException(String message) {
-    super(ErrorCode.QUEUE_READ, null, message, null);
+    super(null, message, null);
   }
 }

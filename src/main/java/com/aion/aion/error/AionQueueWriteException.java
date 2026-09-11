@@ -1,7 +1,5 @@
-package com.aion.error.queue;
+package com.aion.aion.error;
 
-import com.aion.error.ErrorCode;
-import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -15,7 +13,6 @@ public final class AionQueueWriteException extends AionQueueException {
 
   public AionQueueWriteException(int bufferSize, int capacity) {
     super(
-        ErrorCode.QUEUE_WRITE,
         null,
         String.format(
             "Queue backpressure timeout: bufferSize=%d capacity=%d", bufferSize, capacity),
@@ -33,8 +30,8 @@ public final class AionQueueWriteException extends AionQueueException {
   }
 
   @Override
-  protected Map<String, Object> contextMap() {
-    Map<String, Object> ctx = new HashMap<>(super.contextMap());
+  public Map<String, Object> context() {
+    Map<String, Object> ctx = super.context();
     ctx.put("bufferSize", bufferSize);
     ctx.put("capacity", capacity);
     return ctx;

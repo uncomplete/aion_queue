@@ -1,6 +1,6 @@
 package com.aion.aion;
 
-import com.aion.error.queue.AionQueueReadException;
+import com.aion.aion.error.AionQueueReadException;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.locks.LockSupport;
 

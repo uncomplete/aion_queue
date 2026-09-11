@@ -1,6 +1,4 @@
-package com.aion.error.queue;
-
-import com.aion.error.ErrorCode;
+package com.aion.aion.error;
 
 /**
  * Thrown by {@code AionQueueReader.tick()} / {@code tickTo()} (and by {@code
@@ -10,7 +8,7 @@ import com.aion.error.ErrorCode;
 public final class AionEndOfStreamException extends AionQueueException {
 
   public AionEndOfStreamException(String message) {
-    super(ErrorCode.QUEUE_END_OF_STREAM, null, message, null);
+    super(null, message, null);
   }
 
   public AionEndOfStreamException() {

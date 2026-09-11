@@ -2,9 +2,9 @@ package com.aion.aion;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import com.aion.error.queue.AionEndOfStreamException;
-import com.aion.error.queue.AionQueueReadException;
-import com.aion.error.queue.AionQueueWriteException;
+import com.aion.aion.error.AionEndOfStreamException;
+import com.aion.aion.error.AionQueueReadException;
+import com.aion.aion.error.AionQueueWriteException;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;

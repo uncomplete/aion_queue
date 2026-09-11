@@ -1,7 +1,7 @@
 package com.aion.aion;
 
-import com.aion.error.queue.AionEndOfStreamException;
-import com.aion.error.queue.AionQueueReadException;
+import com.aion.aion.error.AionEndOfStreamException;
+import com.aion.aion.error.AionQueueReadException;
 import java.util.Map;
 
 /**

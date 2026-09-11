@@ -1,5 +1,6 @@
 package com.aion.aion;
 
+import com.aion.aion.error.AionEndOfStreamException;
 import java.util.Collection;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -128,7 +129,7 @@ public final class AionMultiQueue<T> {
 
   /**
    * Close every registered stream's writer. Active readers will drain any remaining buffered items
-   * then receive {@link com.aion.error.queue.AionEndOfStreamException} on the next blocking call.
+   * then receive {@link AionEndOfStreamException} on the next blocking call.
    * Idempotent.
    */
   public void closeAllWriters() {

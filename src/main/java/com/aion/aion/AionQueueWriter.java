@@ -1,7 +1,8 @@
 package com.aion.aion;
 
-import com.aion.error.queue.AionQueueMonotonicityException;
-import com.aion.error.queue.AionQueueWriteException;
+import com.aion.aion.error.AionEndOfStreamException;
+import com.aion.aion.error.AionQueueMonotonicityException;
+import com.aion.aion.error.AionQueueWriteException;
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
@@ -91,7 +92,7 @@ public final class AionQueueWriter<T> implements AutoCloseable {
 
   /**
    * Marks the writer closed. Readers blocked in {@code tick()} / {@code tickTo()} will receive
-   * {@link com.aion.error.queue.AionEndOfStreamException} once they have drained past their
+   * {@link AionEndOfStreamException} once they have drained past their
    * requested target.
    */
   @Override
